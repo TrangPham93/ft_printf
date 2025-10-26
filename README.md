@@ -1,21 +1,15 @@
 # ft_printf
 
-**ft_printf** is a project from the **School 42 curriculum** that challenges you to recreate the behavior of the standard C function `printf()`.  
+**ft_printf** recreates the behavior of the standard C function `printf()`.  
 
-It reinforces your understanding of:
-- **Variadic functions** (`stdarg.h`)
-- **String and number formatting**
-- **Memory and buffer management**
-- **Low-level output handling**
-
-You will write a custom version of `printf` that behaves identically to the original for the allowed conversions.
-
+It reinforces my understanding of:
+- **Variadic functions** (`stdarg.h`), which takes a variable number of arguments.
+- **printf function's argument formatting**
 ---
 
 ## Features
 
-### 1. **Supported Conversions**
-Your `ft_printf` must handle the following format specifiers:
+`ft_printf` handles the following format specifiers:
 
 | Specifier | Description | Example |
 |------------|--------------|----------|
@@ -30,32 +24,22 @@ Your `ft_printf` must handle the following format specifiers:
 | `%%` | Print a literal `%` character | `% → %` |
 
 ---
+## Usage
+### Requirement: 
+Linux OS
+### Installment:
+#### 1. Clone the Repository
+   ```bash
+   git clone https://github.com/TrangPham93/ft_printf.git ft_printf
+   cd ft_printf
+   ```
+#### 2. Compile the Project
 
-### 2. **Core Functions**
-You must implement the following:
-
-| Function | Description |
-|-----------|--------------|
-| `ft_printf()` | Main function that parses the format string and prints arguments |
-| `ft_putchar_fd()` | Print a single character |
-| `ft_putstr_fd()` | Print a string |
-| `ft_putnbr_fd()` | Print an integer |
-| `ft_puthex_fd()` | Print numbers in hexadecimal |
-| `ft_putptr_fd()` | Print a pointer address |
-| Helper functions | For counting length, managing base conversions, etc. |
-
----
-
-### 3. **Variadic Function Handling**
-Use the C standard header `<stdarg.h>` for handling variable argument lists:
-```c
-#include <stdarg.h>
-
-int ft_printf(const char *format, ...)
-{
-    va_list args;
-    va_start(args, format);
-    // handle each argument depending on format
-    va_end(args);
-    return (printed_chars);
-}
+```bash 
+cc *.c 
+```
+#### 3. Run
+ 
+```bash 
+./a.out
+```
